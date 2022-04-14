@@ -46,7 +46,7 @@
     "voku/simple_html_dom": "~4.7"
   },
   "require-dev": {
-    "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0"
+    "phpunit/phpunit": "^8.5.26"
   },
   "provide": {
     "php-http/async-client-implementation": "1.0",
