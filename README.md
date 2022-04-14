@@ -1,15 +1,10 @@
-[![Build Status](https://github.com/voku/httpful/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/voku/httpful/actions)
-[![codecov.io](https://codecov.io/github/voku/httpful/coverage.svg?branch=master)](https://codecov.io/github/voku/httpful?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5882e37a6cd24f6c9d1cf70a08064146)](https://www.codacy.com/app/voku/httpful)
-[![Latest Stable Version](https://poser.pugx.org/voku/httpful/v/stable)](https://packagist.org/packages/voku/httpful) 
-[![Total Downloads](https://poser.pugx.org/voku/httpful/downloads)](https://packagist.org/packages/voku/httpful)
-[![License](https://poser.pugx.org/voku/httpful/license)](https://packagist.org/packages/voku/httpful)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/moelleken)
-[![Donate to this project using Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/voku)
+[![Build Status](https://github.com/b3-it/httpful/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/b3-it/httpful/actions)
+[![License](https://github.com/b3-it/httpful/blob/master/LICENSE.txt)](https://github.com/b3-it/httpful/blob/master/LICENSE.txt)
 
 # 📯 Httpful
 
-Forked some years ago from [nategood/httpful](https://github.com/nategood/httpful) + added support for parallel request and implemented many PSR Interfaces: A Chainable, REST Friendly Wrapper for cURL with many "PSR-HTTP" implemented inferfaces. 
+Forked from [nategood/httpful](https://github.com/nategood/httpful) and [vogu/httpful](https://github.com/vogu/httpful)
++ added support for parallel request and implemented many PSR Interfaces: A Chainable, REST Friendly Wrapper for cURL with many "PSR-HTTP" implemented inferfaces. 
 
 Features
 
@@ -85,7 +80,7 @@ $multi->start();
 # Installation
 
 ```shell
-composer require voku/httpful
+composer require b3-it/httpful
 ```
 
 ## Handlers
