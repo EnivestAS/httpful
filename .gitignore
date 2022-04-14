@@ -1,6 +1,16 @@
 .DS_Store
-composer.lock
-vendor
 downloads
-.idea/*
-tests/.phpunit.result.cache
+
+# Tests
+server.log
+.phpunit.result.cache
+
+# Build
+/build/
+
+# IDE
+/.idea
+
+# Composer
+vendor
+composer.lock
