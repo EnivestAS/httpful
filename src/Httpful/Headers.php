@@ -59,7 +59,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return int the number of elements stored in the array
      */
-    public function count()
+    public function count(): int
     {
         return (int) \count($this->data);
     }
@@ -69,7 +69,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return mixed data at the current position
      */
-    public function current()
+    public function current(): mixed
     {
         return \current($this->data);
     }
@@ -79,7 +79,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return mixed case-sensitive key at current position
      */
-    public function key()
+    public function key(): mixed
     {
         $key = \key($this->data);
 
@@ -91,7 +91,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         \next($this->data);
     }
@@ -101,7 +101,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         \reset($this->data);
     }
@@ -111,7 +111,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return bool if the current position is valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return \key($this->data) !== null;
     }
@@ -186,7 +186,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return bool if the offset exists
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return (bool) \array_key_exists(\strtolower($offset), $this->data);
     }
@@ -201,7 +201,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return mixed the data stored at the offset
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         $offsetLower = \strtolower($offset);
 
@@ -216,7 +216,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         throw new ResponseHeaderException('Headers are read-only.');
     }
@@ -228,7 +228,7 @@ class Headers implements \ArrayAccess, \Countable, \Iterator
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         throw new ResponseHeaderException('Headers are read-only.');
     }
