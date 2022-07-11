@@ -2,6 +2,7 @@
 
 /** @noinspection MagicMethodsValidityInspection */
 /** @noinspection PhpMissingParentConstructorInspection */
+/** TEST */
 
 declare(strict_types=1);
 
