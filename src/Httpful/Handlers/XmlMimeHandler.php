@@ -133,7 +133,7 @@ class XmlMimeHandler extends DefaultMimeHandler
      *
      * @return array
      */
-    private function _future_serializeAsXml(&$value, \DOMElement $node = null, \DOMDocument $dom = null): array
+    private function _future_serializeAsXml(&$value, ?\DOMElement $node = null, ?\DOMDocument $dom = null): array
     {
         if (!$dom) {
             $dom = new \DOMDocument();

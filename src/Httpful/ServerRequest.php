@@ -46,9 +46,9 @@ class ServerRequest extends Request implements ServerRequestInterface
      * @param array       $serverParams Typically the $_SERVER (superglobal)
      */
     public function __construct(
-        string $method = null,
-        string $mime = null,
-        self $template = null,
+        ?string $method = null,
+        ?string $mime = null,
+        ?self $template = null,
         array $serverParams = []
     ) {
         $this->serverParams = $serverParams;
