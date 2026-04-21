@@ -16,12 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [
-            7.2,
-            7.3,
-            7.4,
-            8.0
-        ]
+        php: ["8.5.5"]
         composer: [basic]
     timeout-minutes: 10
     steps:
@@ -29,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@2.9.0
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           coverage: xdebug
@@ -49,10 +44,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [[ "${{ matrix.php }}" == "7.4" ]]; then
-            composer require phpstan/phpstan --no-update
-          fi;
-
           if [[ "${{ matrix.composer }}" == "lowest" ]]; then
             composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable
           fi;
@@ -67,12 +58,6 @@ jobs:
         run: |
           mkdir -p build/logs
           php vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=build/logs/clover.xml
-
-      - name: Run phpstan
-        continue-on-error: true
-        if: ${{ matrix.php == '7.4' }}
-        run: |
-          php vendor/bin/phpstan analyse
 
       - name: Upload coverage results to Coveralls
         env:
