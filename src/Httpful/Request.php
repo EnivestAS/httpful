@@ -2196,8 +2196,6 @@ class Request implements \IteratorAggregate, RequestInterface
             }
         }
 
-        \finfo_close($fInfo);
-
         return $new->_withContentType(Mime::UPLOAD);
     }
 
