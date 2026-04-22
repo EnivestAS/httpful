@@ -243,7 +243,6 @@ final class Curl
     public function close()
     {
         if (\is_resource($this->curl)) {
-            \curl_close($this->curl);
         }
     }
 
