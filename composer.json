@@ -51,7 +51,8 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.5.26"
+    "phpunit/phpunit": "^8.5.26",
+    "rector/rector": "^2.0"
   },
   "provide": {
     "php-http/async-client-implementation": "1.0",
